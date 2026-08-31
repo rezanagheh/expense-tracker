@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f1f5f9;
+}
+
+button,
+input,
+select {
+  padding: 10px;
+  font: inherit;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: #3b82f6;
+  color: white;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #60a5fa;
+  margin-bottom: 25px;
+}
+
+.section,
+.card {
+  background: #1f2937;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.section h2 {
+  color: #93c5fd;
+  margin-bottom: 15px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #374151;
+}
+
+.card h3 {
+  color: #cbd5e1;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #60a5fa;
+  margin-top: 10px;
+}
+
+input,
+select {
+  border: 1px solid #4b5563;
+  background: #111827;
+  color: #f1f5f9;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+}
+
+.transaction-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #111827;
+  border-left: 5px solid;
+  border-radius: 6px;
+}
+
+.transaction.income {
+  border-color: #22c55e;
+}
+
+.transaction.expense {
+  border-color: #ef4444;
+}
+
+.transaction p {
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.transaction-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-form input {
+  flex: 1;
+}
+
+.category-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-list span {
+  padding: 6px 12px;
+  background: #1e3a5f;
+  color: #93c5fd;
+  border-radius: 20px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .dashboard,
+  .charts,
+  .transaction-form {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
